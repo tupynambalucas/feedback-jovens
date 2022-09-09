@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/animate.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/feedback.css">
+
+</head>
+<body>
+    <section id="feedback" style="z-index: -1!important;">
+        <div class="flex-box">
+            <% for(var i=0; i<feedback.length; i++) {%>
+                <div class="flex-item">
+                    <div class="item-comentario">
+                        <h1><%= feedback[i].Comentario %></h1>
+                    </div>
+                    <div class="item-footer">
+                        <p><%= feedback[i].Data %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+    <div id="abrir" class="abrir">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+    <div id="form" class="form-div">
+        <div id="fechar" class="fechar">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <form>
+            <textarea id="Comentario" type="text"></textarea>
+            <button id="Botao">Enviar</button>
+        </form>
+    </div> 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.20/autosize.js" integrity="sha512-IPqIv5PLMZsJgrFwpmEdO4Lj3GtgO3JOG4dI8Sc20pKj5YIRbE1Y5nPuT0UrtsV4h+oSey5jBCnkRHkO/73ujA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/feedback.js"></script>
+</body>
+</html>

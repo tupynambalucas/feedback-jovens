@@ -1,0 +1,10 @@
+            <% for(var i=0; i<feedback.length; i++) {%>
+                <div class="flex-item">
+                    <div class="item-comentario">
+                        <h1><%= feedback[i].Comentario %></h1>
+                    </div>
+                    <div class="item-footer">
+                        <p><%= feedback[i].Data %></p>
+                    </div>
+                </div>
+            <% } %>
